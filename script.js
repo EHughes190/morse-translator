@@ -4,6 +4,7 @@ const input = document.getElementById("english-input");
 const output = document.querySelector(".main-content__result");
 const btn = document.querySelector(".main-content__btn");
 const switchBtn = document.querySelector(".switch");
+const subHeading = document.querySelector(".heading-subtitle");
 let isCalculatingMorse = true;
 
 btn.addEventListener("click", () => {
@@ -12,7 +13,6 @@ btn.addEventListener("click", () => {
     output.innerHTML = morseValue;
   } else {
     const englishValue = convertToEnglish(input.value);
-    console.log(input.value);
     output.innerHTML = englishValue;
   }
 });
@@ -20,8 +20,13 @@ btn.addEventListener("click", () => {
 switchBtn.addEventListener("click", () => {
   output.innerHTML = "";
   input.value = "";
-  toggleBool(isCalculatingMorse);
-  console.log(isCalculatingMorse);
+
+  toggleBool();
+  if (!isCalculatingMorse) {
+    subHeading.innerHTML = "Morse Code to English";
+  } else {
+    subHeading.innerHTML = "English to Morse Code";
+  }
 });
 
 function toggleBool() {
