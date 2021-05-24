@@ -2,12 +2,12 @@ import { convertToMorse, convertToEnglish } from "./functions.js";
 
 const input = document.getElementById("english-input");
 const output = document.querySelector(".main-content__result");
-const btn = document.querySelector(".main-content__btn");
+const translateBtn = document.querySelector(".translate");
 const switchBtn = document.querySelector(".switch");
 const subHeading = document.querySelector(".heading-subtitle");
 let isCalculatingMorse = true;
 
-btn.addEventListener("click", () => {
+translateBtn.addEventListener("click", () => {
   if (isCalculatingMorse) {
     const morseValue = convertToMorse(input.value);
     output.innerHTML = morseValue;
@@ -21,7 +21,8 @@ switchBtn.addEventListener("click", () => {
   output.innerHTML = "";
   input.value = "";
 
-  toggleBool();
+  toggleBool(isCalculatingMorse);
+  console.log(isCalculatingMorse);
   if (!isCalculatingMorse) {
     subHeading.innerHTML = "Morse Code to English";
   } else {
@@ -29,6 +30,6 @@ switchBtn.addEventListener("click", () => {
   }
 });
 
-function toggleBool() {
+const toggleBool = () => {
   isCalculatingMorse = !isCalculatingMorse;
-}
+};

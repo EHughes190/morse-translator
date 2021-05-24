@@ -1,4 +1,5 @@
-import { convertToMorse, convertToEnglish } from "./functions.js";
+import { expect, it } from "@jest/globals";
+import { convertToMorse, convertToEnglish, toggleBool } from "./functions.js";
 
 it("Should return .- if a", () => {
   const result = convertToMorse("a");
@@ -33,4 +34,15 @@ it("Should return 4 if ....-", () => {
 it("Should return sentence if input is morse", () => {
   const result = convertToEnglish(".... . .-.. .-.. ---/.-- --- .-. .-.. -..");
   expect(result).toBe("hello world");
+});
+
+it("Should return true if input is false", () => {
+  const result = toggleBool(false);
+  expect(result).toBe(true);
+});
+
+it("Should return true if input is variable", () => {
+  let testCase = true;
+  const result = toggleBool(testCase);
+  expect(result).toBe(false);
 });

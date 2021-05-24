@@ -101,3 +101,7 @@ export const convertToEnglish = (input) => {
     )
     .join(" ");
 };
+
+export const toggleBool = (bool) => {
+  return (bool = !bool);
+};
