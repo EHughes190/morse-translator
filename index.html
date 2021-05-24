@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Morse Code converter</h1>
-    <input id="english-input" type="text" />
-    <div class="result"></div>
-    <button class="button">Translate</button>
+    <header class="heading">
+      <h1 class="heading-title">Morse Code converter</h1>
+    </header>
+    <main class="main-content">
+      <div class="input">
+        <textarea
+          id="english-input"
+          class="main-content__input"
+          type="text"
+        ></textarea>
+      </div>
+      <div class="main-content__result"></div>
+      <button class="main-content__button">Translate</button>
+    </main>
     <script src="./script.js" type="module"></script>
   </body>
 </html>

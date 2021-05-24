@@ -42,10 +42,10 @@ export const convertToMorse = (input) => {
 
   return inputLowerCase
     .split(" ")
-    .map((a) =>
-      a
+    .map((word) =>
+      word
         .split("")
-        .map((b) => values[b])
+        .map((letter) => values[letter])
         .join(" ")
     )
     .join("/");
