@@ -1,18 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;600;700&display=swap");
+
+$font: "Roboto Mono", monospace;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: $font;
 }
 
 body {
   height: 100vh;
   width: 100vw;
+  background-color: #151515;
 
   .heading {
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: blanchedalmond;
   }
 
   .main-content {
@@ -21,29 +28,30 @@ body {
     align-items: center;
     flex-direction: column;
 
-    .input {
-      display: flex;
-      justify-content: center;
-      .main-content__input {
-        text-align: center;
-        font-size: 3em;
-      }
-    }
-
     .main-content__input,
     .main-content__result {
       height: 30vh;
       width: 40vw;
       background-color: cadetblue;
       margin: 10px;
+    }
+    .main-content__input {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .main-content__result {
+      font-size: 1.5em;
+      word-wrap: normal;
+      word-break: break-all;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .main-content__result {
-      font-size: 3em;
-      word-wrap: normal;
-      word-break: break-all;
+
+    .main-content__btn {
+      width: 100px;
+      height: 50px;
+      background-color: darkgoldenrod;
     }
   }
 }
