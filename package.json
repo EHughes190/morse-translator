@@ -4,7 +4,7 @@
   "description": "A translate app which translates from english to morse code",
   "main": "functions.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/EHughes190/morse-translator#readme",
   "dependencies": {
-    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-env": "^7.14.2"
+  },
+  "devDependencies": {
     "jest": "^26.6.3"
   }
 }
