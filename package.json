@@ -1,0 +1,23 @@
+{
+  "name": "morse-translator",
+  "version": "1.0.0",
+  "description": "A translate app which translates from english to morse code",
+  "main": "functions.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EHughes190/morse-translator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EHughes190/morse-translator/issues"
+  },
+  "homepage": "https://github.com/EHughes190/morse-translator#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.14.2",
+    "jest": "^26.6.3"
+  }
+}
