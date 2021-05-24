@@ -15,7 +15,7 @@ it("Should return ....- if 4", () => {
   expect(result).toBe("....-");
 });
 
-// it("Should return sentence if input is hello world", () => {
-//   const result = convertToMorse("hello world");
-//   expect(result).toBe(".... . .-.. .-.. ---.-- --- .-. .-.. -..");
-// });
+it("Should return sentence if input is hello world", () => {
+  const result = convertToMorse("hello world");
+  expect(result).toBe(".... . .-.. .-.. ---/.-- --- .-. .-.. -..");
+});

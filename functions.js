@@ -41,9 +41,12 @@ export const convertToMorse = (input) => {
   const inputLowerCase = input.toLowerCase();
 
   return inputLowerCase
-    .split("")
-    .map((el) => {
-      return values[el] ? values[el] : el;
-    })
-    .join("");
+    .split(" ")
+    .map((a) =>
+      a
+        .split("")
+        .map((b) => values[b])
+        .join(" ")
+    )
+    .join("/");
 };
