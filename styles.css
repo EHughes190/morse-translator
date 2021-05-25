@@ -31,6 +31,8 @@ body .main-content .main-content__result {
   width: 40vw;
   background-color: cadetblue;
   margin: 10px;
+  color: blanchedalmond;
+  border: 2px solid blanchedalmond;
 }
 body .main-content .main-content__input {
   text-align: center;
@@ -44,8 +46,16 @@ body .main-content .main-content__result {
   align-items: center;
   justify-content: center;
 }
-body .main-content .main-content__btn {
+body .main-content .btn-container {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+body .main-content .btn-container .main-content__btn {
   width: 100px;
   height: 50px;
   background-color: darkgoldenrod;
+  border-radius: 10px;
+  font-weight: 400;
 }
