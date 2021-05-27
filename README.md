@@ -1,2 +1,2 @@
 # morse-translator
-A translate app which translates from english to morse code
+A translate app which translates from english to morse code, and vice versa
