@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Morse Translator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="heading">
-      <h1 class="heading-title">Morse Code Translation Tool</h1>
-      <h2 class="heading-subtitle">English to Morse Code</h2>
+      <h1 class="heading__title">Morse Code Translation Tool</h1>
+      <h2 class="heading__subtitle">English to Morse Code</h2>
+      <p class="heading__text">
+        For Morse input, place a space between each letter, and a slash between
+        words
+      </p>
     </header>
-    <main class="main-content">
-      <input id="english-input" class="main-content__input" type="text" />
-      <div class="main-content__result"></div>
+    <main>
+      <div class="main-content">
+        <input id="english-input" class="main-content__input" type="text" />
+        <div class="main-content__result"></div>
+      </div>
       <div class="btn-container">
         <button class="main-content__btn translate">Translate</button>
         <button class="main-content__btn switch">Switch</button>

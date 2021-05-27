@@ -3,6 +3,12 @@
 $font: "Roboto Mono", monospace;
 
 $color-primary: rgb(255, 235, 205);
+$color-secondary: rgb(21, 21, 21);
+$color-tertiary: rgb(95, 158, 160);
+$color-accent: rgb(23, 99, 37);
+
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 992px;
 
 * {
   padding: 0;
@@ -14,7 +20,7 @@ $color-primary: rgb(255, 235, 205);
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #151515;
+  background-color: $color-secondary;
 
   .heading {
     padding: 20px;
@@ -23,48 +29,105 @@ body {
     justify-content: center;
     align-items: center;
     color: $color-primary;
+
+    .heading__title {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .heading__subtitle {
+      font-size: 1.5em;
+      padding: 5px;
+    }
+
+    .heading__text {
+      font-size: 1em;
+      text-align: center;
+    }
   }
 
-  .main-content {
+  main {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-
-    .main-content__input,
-    .main-content__result {
-      height: 30vh;
-      width: 40vw;
-      background-color: cadetblue;
-      margin: 10px;
-      color: $color-primary;
-      border: 2px solid $color-primary;
-    }
-    .main-content__input {
-      text-align: center;
-      font-size: 1.5em;
-    }
-
-    .main-content__result {
-      font-size: 1.5em;
-      word-wrap: normal;
-      word-break: break-all;
+    align-items: center;
+    .main-content {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .main-content__input,
+      .main-content__result {
+        height: 25vh;
+        width: 80vw;
+        background-color: $color-tertiary;
+        margin: 10px;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        text-align: center;
+      }
+      .main-content__input {
+        font-size: 1.5em;
+      }
+
+      .main-content__result {
+        font-size: 1.5em;
+
+        word-wrap: normal;
+        word-break: break-all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .btn-container {
-      width: 40vw;
+      width: 80vw;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 10px;
       .main-content__btn {
         width: 100px;
         height: 50px;
-        background-color: darkgoldenrod;
+        background-color: $color-accent;
         border-radius: 10px;
         font-weight: 400;
+        color: $color-primary;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  body {
+    main {
+      .main-content {
+        .main-content__input,
+        .main-content__result {
+          height: 30vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+  body {
+    main {
+      .main-content {
+        flex-direction: row;
+        .main-content__input,
+        .main-content__result {
+          height: 60vh;
+          width: 35vw;
+        }
+      }
+      .btn-container {
+        width: 80vw;
+        justify-content: space-evenly;
       }
     }
   }
