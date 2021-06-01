@@ -56,6 +56,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      width: 80vw;
 
       .main-content__input,
       .main-content__result {
@@ -87,7 +88,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px;
+
       .main-content__btn {
         width: 100px;
         height: 50px;
@@ -96,6 +97,7 @@ body {
         font-weight: 400;
         color: $color-primary;
         font-size: 1em;
+        border: 2px solid $color-primary;
       }
     }
   }
@@ -127,7 +129,7 @@ body {
       }
       .btn-container {
         width: 80vw;
-        justify-content: space-evenly;
+        justify-content: space-around;
       }
     }
   }
