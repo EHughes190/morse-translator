@@ -1,2 +1,5 @@
 # morse-translator
-A translate app which translates from english to morse code, and vice versa
+
+A translator app which translates from english to morse code, and vice versa.
+
+This project utilises Jest, which allowed me to implement unit testing.
