@@ -93,10 +93,10 @@ export const convertToEnglish = (input) => {
 
   return input
     .split("/")
-    .map((a) =>
-      a
+    .map((word) =>
+      word
         .split(" ")
-        .map((b) => values[b])
+        .map((letter) => values[letter])
         .join("")
     )
     .join(" ");
