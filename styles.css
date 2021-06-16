@@ -11,7 +11,8 @@ body {
   width: 100vw;
   background-color: #151515;
 }
-body .heading {
+
+.heading {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -19,33 +20,33 @@ body .heading {
   align-items: center;
   color: blanchedalmond;
 }
-body .heading .heading__title {
+.heading__title {
   font-size: 2em;
   text-align: center;
 }
-body .heading .heading__subtitle {
+.heading__subtitle {
   font-size: 1.5em;
   padding: 5px;
 }
-body .heading .heading__text {
+.heading__text {
   font-size: 1em;
   text-align: center;
 }
-body .main {
+
+.main {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-body .main .main-content {
+.main__content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 80vw;
 }
-body .main .main-content .main-content__input,
-body .main .main-content .main-content__result {
+.main__input, .main__result {
   height: 25vh;
   width: 80vw;
   background-color: cadetblue;
@@ -54,10 +55,10 @@ body .main .main-content .main-content__result {
   border: 2px solid blanchedalmond;
   text-align: center;
 }
-body .main .main-content .main-content__input {
+.main__input {
   font-size: 1.5em;
 }
-body .main .main-content .main-content__result {
+.main__result {
   font-size: 1.5em;
   word-wrap: normal;
   word-break: break-all;
@@ -65,13 +66,15 @@ body .main .main-content .main-content__result {
   align-items: center;
   justify-content: center;
 }
-body .main .btn-container {
+
+.btn__container {
   width: 80vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .main .btn-container .main__btn {
+
+.main__btn {
   width: 100px;
   height: 50px;
   background-color: #176325;
@@ -83,22 +86,23 @@ body .main .btn-container .main__btn {
 }
 
 @media screen and (min-width: 768px) {
-  body .main .main-content .main-content__input,
-body .main .main-content .main-content__result {
+  .main__input,
+.main__result {
     height: 30vh;
   }
 }
 @media screen and (min-width: 992px) {
-  body .main .main-content {
+  .main__content {
     flex-direction: row;
   }
-  body .main .main-content .main-content__input,
-body .main .main-content .main-content__result {
+
+  .main__input,
+.main__result {
     height: 60vh;
     width: 35vw;
   }
-  body .main .btn-container {
-    width: 80vw;
-    justify-content: space-around;
-  }
+}
+.btn__container {
+  width: 80vw;
+  justify-content: space-around;
 }

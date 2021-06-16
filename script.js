@@ -1,7 +1,7 @@
 import { convertToMorse, convertToEnglish, toggleBool } from "./functions.js";
 
 const input = document.getElementById("english-input");
-const output = document.querySelector(".main-content__result");
+const output = document.querySelector(".main__result");
 const translateBtn = document.querySelector(".translate");
 const switchBtn = document.querySelector(".switch");
 const subHeading = document.querySelector(".heading__subtitle");
